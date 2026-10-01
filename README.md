@@ -8,6 +8,8 @@ From this folder, run `python3 -m http.server 4173` and visit `http://localhost:
 
 ## Activate the waitlist
 
-The form is intentionally in preview mode until a free endpoint is connected. Create a free Formspree form, then replace `YOUR_FORM_ID` in `main.js` with the form ID from its endpoint URL. The bilingual form will then submit email addresses to that endpoint.
+The form uses Formspree and stays in preview mode until its ID is configured. Create a free form, then replace `YOUR_FORM_ID` in `main.js` with the ID from its endpoint URL. The form submits the required email, optional name and city, plus a honeypot and email subject. With JavaScript enabled, visitors see an inline confirmation or localized error; with JavaScript disabled, the native `POST` form submits directly to Formspree.
+
+The current Formspree Free plan lists 50 submissions per month. That limit can change, so confirm the plan before relying on it for a launch target.
 
 No account creation or password-reset flow is advertised; the form is only a launch-interest waitlist.
